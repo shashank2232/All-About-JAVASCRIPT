@@ -1,0 +1,23 @@
+// declaring a BigInt variable
+// let a = BigInt("450")
+// console.log(a)            // 450n
+
+// JS has 7 primitive i.e. built in data types (nn bb ss u)
+let a = null            // null
+let b = 345             // number
+let c = true            // boolean
+let d = BigInt(456) + BigInt(4)    // bigint     460n
+let e = "Shashank"      // string
+let f = Symbol("I am a Symbol")    // symbol
+let g = undefined                  // undefined
+console.log(a, b, c, d, e, f, g)
+console.log(typeof b)
+
+// OBJECTS IN JS (Non Primitive Data Types)
+const item = {
+  name: "Mobile",
+  price: 30000
+}
+console.log(item)
+console.log(item["name"])
+console.log(item["price"])

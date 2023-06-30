@@ -1,0 +1,33 @@
+// FUNCTIONS IN JS
+/* let x = 20;
+let y = 30;
+// this function returns the value i.e. avg of 2 nums
+function average(x,y){
+  return (x+y)/2 ;
+}
+console.log("Avg is: " + average(x,y))
+*/
+
+// ARROW FUNCTIONS (Arrow functions allow us to write shorter function syntax)
+// this is an arrow function without any parameter, just to print
+// const print = () => {
+//   console.log("ARROW FUNCTION")
+// }
+// print()
+
+// this is an arrow function with parameters to get sum of them
+// const sum = (a,b) => {
+//   return a+b;
+// }
+// console.log("SUM OF 2 NUMBERS: " + sum(10,20));
+
+// NOTE: Unline c++ where we used to write datatype also with parameters, in JS we only write the variable 
+// To make the function run, we must call/invoke the function by its name 
+
+// let a = prompt("Enter first number: ");
+// let b = prompt("Enter second number:")
+// let myFunction = (a, b) => a * b;
+// console.log("Multiplication of 2 nums: " + myFunction(a,b));
+
+// If the function has only one statement, and the statement returns a value, you can remove the brackets and the return keyword
+// hello = () => "Hello World!"; 

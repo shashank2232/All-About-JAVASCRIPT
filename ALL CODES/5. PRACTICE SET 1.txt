@@ -1,0 +1,35 @@
+// PRACTICE SET 1  (Variables and Objects)
+// Q1. Create a variable of type string and try to add a number to it
+// let a = "Shashank"
+// let b = 20
+// console.log(a + b) 
+// when we add something to string,it gets concatenated
+
+// Q2. Use typeof operator to find datatype of string in above q
+// console.log(typeof (a+b))
+
+// Q3. Create a const object.Can you change it to hold a number later?
+// const a = {
+//   name:"Shashank",
+//   age:22,
+//   isGod:true
+// }
+// a = 6            // error , hence we can't change it later
+
+// Q4. Try to add a new key to the const object in Q3. 
+// a["friend"] = "Sumit" 
+// a["name"] = "Harry"
+// console.log(a)
+// here const a is pointing to an object, we can add keys to the object and also change any key's value in that object
+// a is the reference to this object
+
+// Q5. Write a program to create a word-meaning dictionary of 3 words
+const dictionary = {
+  determine: "to decide what will happen",
+  consider: "to spend time thinking about a possibility",
+  important: "necessary or of great value"
+}
+console.log(dictionary)
+console.log(dictionary.important)
+console.log(dictionary['important'])
+console.log(dictionary["important"])

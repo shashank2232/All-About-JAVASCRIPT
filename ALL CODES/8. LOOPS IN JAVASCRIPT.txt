@@ -1,0 +1,50 @@
+// LOOPS IN JAVASCRIPT
+// 1. FOR LOOP
+// for(let i=1;i<11;i++){
+//   console.log(i)
+// }
+
+// Sum of first n natural numbers using for loop
+// let sum = 0
+// let n = prompt("Enter value of n")
+// n = Number.parseInt(n)
+// for(let i=1;i<=n;i++){
+//   sum += i
+// }
+// console.log("Sum of first " + n + " natural numbers is " + sum)
+
+// 2. FOR-IN LOOP (to iterate for key in Object)
+// let obj = {
+//   harry:90,
+//   shubh:45,
+//   shivika:56,
+//   ritika:57,
+//   shiv:100
+// }
+// for(let x in obj){
+//   console.log(x)
+//   console.log("Marks of " + x + " is " + obj[x]);
+// }
+
+// 3. FOR-OF LOOP
+// for(let x of "Shashank"){
+//   console.log(x)
+// }
+// will go on each index/element of Shashank and print it
+
+// 4. WHILE LOOP
+// let n = 5;
+// let i = 0;
+// while (i < n) {
+//   console.log(i);
+//   i++;
+// }
+// if condition inside while never gets false, it becomes an INFINITE LOOP
+
+// 5. DO-WHILE LOOP
+let n = 5;
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < n)

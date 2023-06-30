@@ -1,0 +1,6 @@
+console.log("Adding 1,2 and 54")
+function addThree(a, b, c) {
+  return a + b + c;
+}
+let c = addThree(1, 2, 54)
+console.log("SUM IS: " + c)

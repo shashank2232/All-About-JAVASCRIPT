@@ -1,0 +1,42 @@
+// console.log("Learning about var,let and const !")
+
+// // var is globally scoped
+// var a = "Shashank"
+// // inside this block we again created variable b using var and assigned
+// // it "Hey" , now globally b is "Hey" so whether b gets printed inside or outside the block {} it'll print "Hey"
+// {
+//   var a = "Hey"
+//   console.log(a)
+// }
+// console.log(a)
+
+// // let is block-scoped
+// let a = "Mishra"
+// {
+//   // since let is block-scoped, the variable a inside this scope is different from the variable a outside, hence when we move out of the block, a contains "Mishra" and gets printed
+//   let a = "Buddy" 
+//   console.log(a)
+// }
+// console.log(a)
+
+
+// var can be updated & redeclared in its scope
+// var a = 20
+// console.log(a)
+// var a = "Mishra"
+// console.log(a)
+
+// // let can be updated but not redeclared
+// let b = 100
+// // let b = 200      // error (redeclared)
+// b = 150            // updated
+// console.log(b)
+// let b = "Hey"
+// console.log(b)
+
+// const i.e. constants can neither be updated nor declared
+const author = "Shashank"
+// const author = "Mishra"          // error
+console.log(author)
+// let author = 5    // error since author is previously declared as const
+// const name           // gives error since const needs to be initialized during declaration only

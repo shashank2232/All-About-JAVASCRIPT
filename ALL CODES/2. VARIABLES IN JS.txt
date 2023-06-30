@@ -1,0 +1,13 @@
+console.log("Welcome Shashank")
+
+let a=20     // a is a variable of type integer with value 20
+console.log(a)         // simply to print a in console
+a = "Shashank"     // a becomes of type string 
+console.log(a)
+
+// let 10x = 20;       // syntax error as variable name can't start with a number
+// let var = 27        // js reserved words(keywords) can't be used as a variable name
+let harry=100
+let HARRY=200     // JS is CASE-SENSITIVE i.e. variable harry and HARRY are both different
+console.log(harry)
+console.log(HARRY)
