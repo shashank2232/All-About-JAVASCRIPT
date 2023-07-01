@@ -1,0 +1,52 @@
+// Practice Set 3 (Loops & Functions)
+// Q1. Write program to print marks of student in an object using for loop.
+// let marks = {
+//   harry: 98,
+//   rohan: 70,
+//   akash: 65,
+//   shivam: 55
+// }
+// for(let i = 0;i < Object.keys(marks).length;i++){
+//   console.log("The marks of " + Object.keys(marks)[i] + " is " + marks[Object.keys(marks)[i]])
+// }
+// NOTE: Object.keys will give the keys of the object
+// Object.keys(marks) tell to give keys of object named marks
+// Object.keys(marks).length gives the length of keys in object marks (4)
+// Object.keys(marks) means harry,rohan,akash,shivam , giving us all keys of object marks
+// console.log("The marks of " + Object.keys(marks)[i] + " is " + marks[Object.keys(marks)[i]])
+// Object.keys(marks)[i] means traversing each keys in object marks
+// marks[Object.keys(marks)[i]]  means when we put any key in marks, we'll get that key's value
+// i.e. marks[harry] = 98 , marks[rohan] = 70 and so on
+
+// Q2. Write program in Q1 using for-in loop.
+// for(let key in marks){
+//   console.log(key);     // key is traversing through the keys of marks
+//   console.log("The marks of " + key + " is " + marks[key]);
+// }
+
+// Q3. Write program to print "try again" until user enters the correct number.
+// let number = 5;
+// let i;
+// while(i != number){
+//   console.log("TRY AGAIN!")
+//   i = prompt("Enter your number:")
+// }
+// console.log("You entered correct number")
+
+// Q4. Write a function to get mean of 5 numbers.
+// let a = 1
+// let b = 2
+// let c = 3
+// let d = 4
+// let e = 5
+
+// function mean(a,b,c,d,e){
+//   return (a+b+c+d+e)/5;
+// }
+// console.log("MEAN IS:" + mean(a,b,c,d,e));
+
+// using Arrow function
+const mean = (a,b,c,d,e) => {
+  return (a+b+c+d+e)/5;
+}
+console.log("MEAN IS:" + mean(1,2,3,4,5));
