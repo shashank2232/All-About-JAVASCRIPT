@@ -1,0 +1,36 @@
+//Practice Set 4 
+// Q1. What will the following print in Javascript?
+// will print 4 since \ and " are single character
+// let str = "har\"";
+// console.log(str.length);
+
+// Q2. Explore the includes,startsWith and endsWith functions of a string.
+// includes()
+// let text = "Hello world, welcome to the universe.";
+// let result = text.includes("world");
+// console.log(result);         // gives true if "world" is present in text,else will give false
+
+// startsWith()
+// let text = "Hello world, welcome to the universe.";
+// console.log(text.startsWith("Hello"));
+// if string text starts with "Hello" it'll return true, if not returns false
+
+// endswith()
+// let text = "Hello world";
+// console.log(text.endsWith("world"));
+
+// Q3. Write a program to convert a given string to lowercase
+// let name = "SHASHANK";
+// console.log(name.toLowerCase());
+
+// Q4. Extract the amount out of this string
+// "Please give Rs 1000"
+// let str = "Please give Rs1000";
+// let amount = str.slice("Please give Rs".length);    // this slices the string and gives us 1000
+// console.log(amount);
+
+// Q5. Try to change 4th character of a given string.
+let name = "Harry";
+name[3] = "z";         //THIS IS WRONG BUT JS ALSO WON'T GIVE AN ERROR HERE
+console.log(name)
+// we can't change a character of string since strings are IMMUTABLE
