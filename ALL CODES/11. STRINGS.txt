@@ -1,0 +1,88 @@
+// STRINGS
+/* let name = "Shashank"
+console.log(name)
+console.log(name.length)      // ALT+SHIFT+BOTTOM
+console.log(name[0])            // S
+console.log(name[5])            // a
+
+let friend = 'Harry'
+console.log(friend)
+console.log(friend.length)
+*/
+
+// TEMPLATE LITERALS
+/* let boy1 = "Nikhil"
+let boy2 = "Arjun"
+let sentence = `${boy1} is a friend of ${boy2}`
+console.log(sentence)
+console.log(`My name is "Shashank" 'Mishra' `)
+*/
+
+//ESCAPE SEQUENCE CHARACTERS
+/* let name = 'Adam D\'Angelo'
+console.log(name)
+
+// let sentence = "This is Shashank\'s book"
+let sentence = "This is Shashank\"s book"
+console.log(sentence)
+
+// the newline character (\n)
+let newLine = "This creates a \nnew line!"
+console.log(newLine)
+
+// the tab character
+let tabCharacter = "This gives a \t tab"
+console.log(tabCharacter)
+
+// a carriage return character
+console.log('Hello\rWorld');
+*/
+
+// STRING METHODS
+// (i) .length (to get string length)
+// let name = "Shashank";
+// console.log(name.length);
+
+// (ii) .toUpperCase (to convert whole string to Capital Letters)
+// let name = "Shashank";
+// console.log(name.toUpperCase());
+
+// (iiI) .toLowerCase (to convert whole string to Small Letters)
+// let name = "Shashank";
+// console.log(name.toLowerCase());
+
+// (iV) .slice (to slice/cut from string)
+// let name = "Shashank";
+// console.log(name.slice(2,4));
+
+// .slice() without the second argument takes till the end of string
+// let name = "Shashank";
+// console.log(name.slice(2));
+
+// (v) .replace
+// let name = "Harry Bhai";
+// let newName = (name.replace("Bhai","Brother"));
+// console.log(newName);
+
+// (vi) .concat
+// let name = "Harry";
+// let friend = "Naman";
+// console.log(name.concat(" is a friend of ",friend));
+
+// (vii) .trim
+// let name = "    Harry   ";
+// console.log(name.trim())
+
+// Note: Strings are immutable(whose value can not be changed after initialization)
+// Strings can never be changed.
+// let name = "Harry";
+// console.log(name[0]);
+// name[3] = "g";           // wrong
+// ORIGINAL STRING NEVER GETS CHANGED, A NEW STRING IS RETURNED TO US WHEN WE USE THESE METHODS.
+// console.log(name[1]);
+// console.log(name[2]);
+// traversing string using for loop
+let name = "Shashank";
+for(let i=0;i<name.length;i++){
+  console.log(name[i]);
+}
