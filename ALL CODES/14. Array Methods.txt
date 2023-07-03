@@ -1,0 +1,73 @@
+// More Array Methods
+// (vii) delete operator to delete array elements
+// doesnt change array length
+// let arr = [1,2,3,4];
+// console.log(arr.length);
+// delete arr[1];
+// console.log(arr);
+// console.log(arr.length);
+
+// (viii) concat      to concatenate/join arrays
+// let arr1 = [1,2,3];
+// let arr2 = [4,5,6];
+// let arr3 = arr1.concat(arr2);
+// console.log(arr3);
+
+// joining more than 2 arrays
+// let arr1 = [1,2,3];
+// let arr2 = [4,5,6];
+// let arr3 = [7,8,9,10];
+// let arr4 = arr1.concat(arr2,arr3);
+// console.log(arr4);            // [1,2,3,4,5,6,7,8,9,10]
+
+// (ix) .sort()   sorts array alphabetically,modifies original array
+// it considers all as string, so sorts them alphabetically
+// 1 k baad agar array me 11 h to 1 k baad 11 ayega
+// eg. [5,1,8,2,11,9,24] after sort [1,11,2,24,5,8,9]
+// let arr = [6,4,8,3,1,11];
+// console.log(arr.sort());                // [1,11,3,4,6,8]
+// console.log(arr);      // original array has been modified, previously arr was [6,4,8,3,1,11] , after sorting array is [1,11,3,4,6,8]
+// let arr2 = ['a','z','h','c'];
+// console.log(arr2.sort());              // ['a','c','h','z']
+// console.log(arr2);
+
+// to actually sort array in ascending order, sort() takes an optional compare function
+// let compare = (a, b) => {
+//   return a - b;
+// }
+// let num = [551, 22, 3, 14, 5, 6, 7, 8, 229];
+// num.sort(compare);
+// console.log(num);
+// Here's a step-by-step explanation of the code:
+// 1. The code declares a variable compare and assigns it an arrow function. The arrow function takes two parameters a and b, representing two numbers to be compared. Inside the function, it subtracts b from a and returns the result. This means that if a is greater than b, the result will be positive, indicating that a should come after b in the sorted array. If a is less than b, the result will be negative, indicating that a should come before b. If a and b are equal, the result will be 0.
+
+// 2. The code declares an array num with several numbers.
+
+// 3. The sort() method is called on the num array, passing the compare function as an argument. The sort() method arranges the elements of the array in ascending order using the provided comparison function. In this case, the compare function determines the sorting order based on the numerical difference between the elements.
+
+// 4. Finally, the sorted array is logged to the console using console.log(num).
+
+// So, after executing this code, the output will be the sorted array [3, 5, 6, 7, 8, 14, 22, 229, 551], where the numbers are arranged in ascending order.
+
+
+// .reverse()   reverses the array
+// let arr = [1,2,3,4,5];
+// console.log(arr.reverse());       
+
+// SPLICE & SLICE
+// Splice is used to add new items to array
+// let num = [551,22,3,14,5,6,7,8,229];
+// num.splice(2,3,101,102,103);
+// console.log(num);
+// index 2 se 3 elements ko change krna h or unme 101,102,103 daalna h
+
+// in this case from index 2 , 3 elements will be removed and 101,102,103,104,105 will be added in their place causing array to increase its length
+// let num = [551,22,3,14,5,6,7,8,229];
+// console.log(num.splice(2,3,101,102,103,104,105));       // returns the deleted items i.e. [3,14,5] & modifies original array
+// console.log(num);
+
+// SLICE (cuts a piece of array,doesn't modify original array, creates a new array and puts elements in it)
+let num = [1, 2, 3, 4, 5];
+let newArr = num.slice(2, 4);
+console.log(num);
+console.log(newArr);

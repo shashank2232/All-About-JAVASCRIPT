@@ -1,0 +1,39 @@
+//Practice Set 5 (ARRAYS)
+// Q1. Create an array of numbers & take input from user to add numbers to this array.
+// let arr = [1,2,3,4];
+// let number = prompt("Enter a number:");
+// number = Number.parseInt(number);   
+// arr.push(number);
+// console.log(arr);
+
+// Q2. Keep adding numbers to the array in Q1 until 0 is added to array.
+// let arr = [1,2,3,4];
+// let number;
+// do {
+//   number = prompt("Enter a number:");
+//   number = Number.parseInt(number);   
+//   arr.push(number);
+// }
+// while(number != 0);
+// console.log(arr);
+
+// Q3. Filter for numbers divisible by 10 from an array.
+// let arr = [10,43,20,56,70];
+// let arr2 = arr.filter((element) => {
+//   return element % 10 == 0;
+// })
+// console.log(arr2);
+
+// Q4. Create array of square of given numbers.
+// let arr = [10,43,20,56,70];
+// let arr2 = arr.map((element) => {
+//   return element * element;
+// })
+// console.log(arr2);
+
+// Q5. Use reduce method to calculate factorial of a given number from an array of first n natural numbers. (n being number whose factorial needs to be calculated)
+let arr = [1,2,3,4,5,6,7,8];
+let answer = arr.reduce((element1,element2) => {
+  return element1 * element2;
+})
+console.log(answer);                // 40320

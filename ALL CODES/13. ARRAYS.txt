@@ -1,0 +1,57 @@
+// ARRAYS
+// let arr = [1,2,3,4];              // array of numbers
+// let arr2 = [7,"Harry",false];         //array of different types
+
+// we can access values of array
+// let marks = [91,92,80,83];
+// console.log(marks[1]);
+// console.log(marks[2]);
+// console.log("Length of array is:" + marks.length);   // finding length
+
+// ARRAYS ARE MUTABLE(we can change values in array)
+// let marks = [90,92,87,70];
+// console.log(marks);
+// console.log(marks[3]);
+// marks[3] = 77;
+// console.log(marks[3]);
+// In JS, arrays are objects, typeof operator of array is OBJECT
+// console.log(typeof marks);
+// accessing array elements using for loop
+// for(let i = 0;i<marks.length;i++){
+//   console.log(marks[i]);
+// }
+
+// ARRAY METHODS
+// (i) .toString() converts array type to string 
+// let arr = [1,2,3,4,5];
+// console.log(typeof arr);
+// arr = Number.parseInt(arr);      // converting type of arr to number
+// console.log(typeof arr);
+// arr = arr.toString();            // converting type of arr to string
+// console.log(typeof arr);           
+
+// (ii) .join()   joins all array elements using a separator
+// let arr = [1,2,3,4];
+// console.log(arr.join("->"));
+
+// (iii) .pop()  removes last element from the array and does changes in original array
+// let arr = [1,2,3,4];
+// console.log(arr.pop());                // 4
+// console.log(arr);                    // [1,2,3]
+
+// (iv) .push()   adds a new element at the end of array
+// let arr = [1,2,3,4];
+// console.log(arr);
+// arr.push(5);
+// console.log(arr);
+
+// (v) .shift()  removes 1st element from array and returns it
+// let arr = [1,2,3,4];
+// console.log(arr.shift());           // 1
+// console.log(arr);                // [2,3,4]
+
+// (vi) .unshift() adds new element to array & returns the length of that new array
+// let arr = [1,2,3,4];
+// console.log(arr.unshift(10));     // gives length of modified array
+// console.log(arr);
+

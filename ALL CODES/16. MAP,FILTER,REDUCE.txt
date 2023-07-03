@@ -1,0 +1,68 @@
+// (1) MAP  creates a new array and returns it
+// let arr = [10,20,30,40];
+// let arr2 = arr.map((value) => {
+//   console.log(value * value);          // for-each was also doing same
+// })
+// console.log(arr);
+// console.log(arr2);
+// NOTE: Map is used when want to create a new array, use for-each when we have to do an operation on elements of array
+
+// let arr = [10,20,30,40];
+// gives value and index of all elements in array, array after index gives whole array together for each element & does for all the elements
+// let arr2 = arr.map((value,index,array) => {
+//   console.log(value,index,array);
+//   return value + index;
+// })
+// console.log(arr2);        // [10,21,32,43]
+// console.log(arr)
+
+// (2) FILTER(filters array with values passing condition, creates a new array and returns it)
+// let arr = [10,20,30,40];
+// let arr2 = arr.filter((value) => {
+//   return value > 20;     // elements greater than 20 will be returned
+// })
+// console.log(arr2);               // [30,40]
+// original arraay arr doesn't change
+
+// (3) REDUCE  reduces array to a single value (returns a value)
+// let arr = [10,20,30,40];
+// let arr2 = arr.reduce((element1,element2) => {
+//   return element1 + element2;
+// })
+// traversing array
+// 1st itr: element1=10 , element2=20
+// 10 + 20 = 30
+// 2nd itr: element1= 30 , element2 = 30
+// 30+30 = 60
+// 3rd itr: element1 = 60, element2 = 40
+// 60+40 = 100
+// answer = 100
+// console.log(arr);               // original array doesn't change
+// console.log(arr2);
+
+// ANOTHER WAY by making a separate function:
+// let arr = [10,20,30,40];
+// const add = (element1,element2) => {
+//   return element1 + element2;
+// }
+// let arr2 = arr.reduce(add);
+// console.log(arr2);
+// here in arr2 , arr calls reduce function with inside an add function
+// elements goto add function, operation of adding is done and result is returned
+
+// Reduce without arrow function
+// const numbers = [1, 2, 3, 4];
+// const sum = numbers.reduce(function (result, item) {
+//   return result + item;
+// }, 0);
+// console.log(sum); // 10
+
+// NOTE: MAP returns an array , FILTER returns an array, REDUCE returns a value
+// ARROW FUNCTIONS
+// let hello = () => {
+//   return "Hello World!";
+// }
+// console.log(hello());
+
+// let hello = () => "Hello World!";
+

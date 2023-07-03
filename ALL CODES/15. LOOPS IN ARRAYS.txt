@@ -1,0 +1,30 @@
+// LOOPS IN ARRAYS
+// (i) traversing whole array using FOR Loop
+// let arr = [1,2,3,4,5];
+// for(let i=0;i < arr.length;i++){
+//   console.log(arr[i]);
+// }
+
+// (ii) to print each element's square, use FOR-EACH Loop , element passed in as parameter tells for each loop goes to each element,does its square and prints it
+// let arr = [1,2,3,4];
+// arr.forEach((element) => {
+//   console.log(element * element);
+// })
+
+// (iii) Array.from()
+// let name = "Harry";
+// let arr = Array.from(name);
+// console.log(arr);
+
+// (iv) FOR-OF (shortcut to access array items)
+// let num = [1,2,3,4];
+// for(let i of num){
+//   console.log(i);
+// }
+
+// (v) FOR-IN 
+// let num = [10,20,30,40];
+// for(let i in num){
+//   console.log(i);         // gives index of each element
+//   console.log(num[i]);     // gives each element of array
+// }
