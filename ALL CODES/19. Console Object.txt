@@ -1,0 +1,37 @@
+// console.log(console);       // in console, will show all objects of console
+// console.assert(56 > 60)       shows error
+// VM308:1  Assertion failed: console.assert
+
+// console.assert(568 > 60)          no error
+// undefined
+
+// NOTE: In console, to get any info of any method, write that method and press ENTER, console.assert() + enter 
+
+// table() method
+// obj = {a:1, b:2, c:3}
+// console.table(obj)       shows the key value pairs in TABULAR FORM
+
+// warn()
+// console.warn("NO SMOKING")
+
+// error()
+// console.error("This is an ERROR")
+
+// info()
+// console.info("IMP INFO")
+
+// TO GET TIME FOR HOW MUCH FOR LOOP RUNS
+console.time("For loop")
+for (let i = 0; i < 5; i++) {
+  console.log(20);
+}
+console.timeEnd("For loop")
+// both time for loop and while loop can be compared
+// TO GET TIME FOR HOW MUCH WHILE LOOP RUNS
+console.time("While loop")
+let i = 0;
+while (i < 5) {
+  console.log(20);
+  i++;
+}
+console.timeEnd("While loop")

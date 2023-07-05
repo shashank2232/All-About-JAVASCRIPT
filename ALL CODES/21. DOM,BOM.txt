@@ -1,0 +1,12 @@
+// Window
+// console.log(window);          // shows all window objects
+// window.console.log(window);     same as above
+// window.alert();      similar to alert()
+
+// DOM
+// console.log(document);            // shows the JS representation of page
+console.log(document.body);          // shows all body methods that can be used
+document.body.style.backgorund = "red";
+
+// BOM (alert,prompt,confirm)
+// location.href = "https://google.com"   when this runs,it'll take us to google.com

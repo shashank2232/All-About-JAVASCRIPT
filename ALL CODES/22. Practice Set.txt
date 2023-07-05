@@ -1,0 +1,69 @@
+// Q1. Write program using prompt function to take input of age as a value from user and use alert to tell him if he can drive.
+// alert("Enter your age!");
+// let age = prompt("Your age is:","18");
+// age = Number.parseInt(age);
+// const canDrive = (age) => {
+//   return (age >= 18) ? true : false;
+// }
+// if(canDrive(age)){
+//   alert("YOU CAN DRIVE!");
+// }
+// else{
+//   alert("YOU CAN'T DRIVE!");
+// }
+
+// Q2. In Q1 use confirm to ask user if he wants to see prompt again.
+// alert("Enter your age!");
+
+// const canDrive = (age) => {
+//   return (age >= 18) ? true : false;
+// }
+
+// let runAgain = true;
+// // till the time user doesnt press cancel,it'll keep taking user age as input
+// while(runAgain){
+//   let age = prompt("Your age is:","18");
+//   age = Number.parseInt(age);
+//   if(canDrive(age)){
+//   alert("YOU CAN DRIVE!");
+//   }
+// else{
+//   alert("YOU CAN'T DRIVE!");
+//   }
+//   runAgain = confirm("Want to input age again?");
+// }
+
+// Q3. In prev q, use console.error to log error if age entered is negative.
+// alert("Enter your age!");
+
+// const canDrive = (age) => {
+//   return (age >= 18) ? true : false;
+// }
+
+// let runAgain = true;
+// while(runAgain){
+//   let age = prompt("Your age is:","18");
+//   age = Number.parseInt(age);
+//   if(age < 0){
+//     console.error("Enter valid age!");
+//     break;
+//   }
+//   if(canDrive(age)){
+//   alert("YOU CAN DRIVE!");
+//   }
+// else{
+//   alert("YOU CAN'T DRIVE!");
+//   }
+//   runAgain = confirm("Want to input age again?");
+// }
+
+// Q4. Write program to change url to google.com(redirection) if user enters a number greater than 4.
+// let num = prompt("Enter number: ");
+// num = Number.parseInt(num);
+// if(num > 4){
+//   location.href = "https://google.com";
+// }
+
+// Q5. Change background of page to yellow,red or any other color based on user input.
+let color = prompt("Enter page background color:");
+document.body.style.background = color;

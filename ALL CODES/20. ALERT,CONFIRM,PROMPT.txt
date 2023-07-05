@@ -1,0 +1,28 @@
+// ALERT & PROMPT
+// alert("HEY THERE, THIS IS AN ALERT!");
+// alert("Enter a number!");
+// let num = prompt("Enter it:");
+
+// // console.log("Your number is " + num);
+// document.write(num);            // will write the number in our document
+// alert("You entered of type: " + (typeof num));
+
+// Default value in prompt:
+// alert("Enter a number:");
+// let num = prompt("Enter here!","100");            // here when it asks user for input, by default prompt shows 100
+// num = Number.parseInt(num);
+// alert("You entered number of type: " + (typeof num));
+
+// CONFIRM (shows a message & waits for user to press OK or Cancel)
+alert("Enter a number:");
+let num = prompt("Enter here!","100");            
+num = Number.parseInt(num);
+alert("You entered number of type: " + (typeof num));
+let write = confirm("Do you want to write the number to our page?");
+// if user clicks on OK, it'll write number on page, else it'll print message
+if(write){
+  document.write(num);
+}
+else{
+  document.write("Please allow me to write.");
+}
