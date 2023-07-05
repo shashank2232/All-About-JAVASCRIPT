@@ -1,0 +1,63 @@
+// EXERCISE 1 (Guess The Number)
+/* Write a JS program to generate a random number and store it in a variable. Program then takes an input from user to tell them whether the guess was correct,greater or lesser than original number.    
+100(number of guesses) is the score of user. The program is expected to terminate once the number is glossed. Number should be between 1-100.
+*/
+// Generate a random number between 1 and 100 (adding 1 to make 0 as 1)
+// const randomNumber = Math.floor(Math.random() * 100) + 1;
+
+// let score = 0;
+// let guess = null;
+
+// // Prompt the user to guess the number until they get it right
+// while (guess !== randomNumber) {
+//   guess = prompt("Guess a number between 1 and 100:");
+
+//   // If the user cancels the prompt, exit the program
+//   if (guess === null) {
+//     break;
+//   }
+
+//   // Convert the user's guess to a number
+//   guess = Number(guess);
+
+//   // If the user's guess is not a valid number, prompt them again
+//   if (isNaN(guess) || guess < 1 || guess > 100) {
+//     alert("Please enter a valid number between 1 and 100.");
+//     continue;
+//   }
+
+//   // Check if the user's guess is correct
+//   if (guess === randomNumber) {
+//     score++;
+//     alert(`Congratulations! You guessed the number ${randomNumber} in ${score} tries.`);
+//   } else if (guess < randomNumber) {
+//     score++;
+//     alert("Your guess is low. Enter greater number.");
+//   } else {
+//     score++;
+//     alert("Your guess is high. Enter smaller number.");
+//   }
+// }
+
+// MY SOLUTION
+// Math.random gives a random number with decimals , Math.floor converts it to integer with no decimals , * 100 assures to get random number between 0 to 99 and + 1 assures result comes between 1 to 100
+const randomNumber = Math.floor(Math.random() * 100) + 1;
+// console.log(randomNumber);
+let score = 100;
+let num;
+while (num != randomNumber) {
+  num = prompt("Enter number between 1 and 100:");
+  num = Number.parseInt(num);
+  if (num == randomNumber) {
+    console.log("CONGRATS, YOU ENTERED CORRECT NUMBER!");
+  }
+  else if (num < randomNumber) {
+    console.log("Please enter a bigger number.")
+  }
+  else if (num > randomNumber) {
+    console.log("Please enter a smaller number.")
+  }
+  else {
+    console.log("Please enter a valid number");
+  }
+}
