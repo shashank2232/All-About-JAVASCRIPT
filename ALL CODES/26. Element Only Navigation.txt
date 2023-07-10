@@ -1,0 +1,46 @@
+HTML CODE:
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Portfolio</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body><!-- firstElement child only gives the element -->
+  <!-- firstChild gives the element,or text or even comment if present -->
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>About Me</li>
+      <li>Hire Me</li>
+    </ul>
+  </nav>
+  <div class="container">
+    <p>Hey, I am Shashank Mishra!</p>
+  </div>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
+
+JAVASCRIPT CODE:
+const changeBgRed = () => {
+  document.body.firstElementChild.style.background = "red";
+}
+let b = document.body;
+console.log("First child of body b is:", b.firstChild);         // text
+console.log("First element child of body b is:", b.firstElementChild);  // nav
+
+// Note: When we use firstChild, we see any type of child node, text or comment or element anything.
+// Firstelementchild means we'll only get eleme
+// in html, if after body there's space and comment is in next line, firstchild of body will be text, but if after body comment node is attached to it without any spaces then firstchild of body will be comment

@@ -1,0 +1,53 @@
+HTML CODE:
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ATTRIBUTES</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="first" class="hey" data-game="mario" data-player="harry">
+    Hey I am first container
+  </div>
+  Hello world
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
+
+JS CODE:
+let first = document.getElementById("first");
+// getAttribute() gives value of attribute
+// let a = first.getAttribute("class");        // value of attribute class is hey
+// console.log(a);
+
+// hasAttribute()   checks existence of attribute
+// console.log(first.hasAttribute("class"));   // true as class is attribute in 1st element
+// console.log(first.hasAttribute("style"));    // false as style isn't an attribute in 1st element
+
+// setAttribute()     sets value of attribute
+// first.setAttribute("hidden","true");    // sets value of id first hidden,it'll hide
+
+// removeAttribute()
+// first.removeAttribute("class");
+//  Before execution: <div id="first" class="hey">
+// after execution :   <div id="first">        class atr got removed 
+
+// .attributes         gives collection of all attributes
+// console.log(first.attributes);
+
+// add custom attributes using data- 
+console.log(first.dataset);
+console.log(first.dataset.game);        // mario
+console.log(first.dataset.player);     // harry

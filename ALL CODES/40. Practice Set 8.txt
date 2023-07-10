@@ -1,0 +1,87 @@
+HTML CODE:
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Practice Set 8</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <!-- <button onclick="alert('Please give me one plate of chowmein')">Chow</button>
+  <button onclick="alert('Please give me one plate of vada pao')">Pao</button>
+  <button onclick="alert('Please give me one plate of vada wow')">Wow</button>
+  <h1>Bookmarks</h1>
+  <a href="https://google.com"><button id="google">GOOGLE</button></a>
+  <a href="https://twitter"><button id="twitter">TWITTER</button></a>
+  <a href="https://fb"><button id="fb">FACEBOOK</button></a> -->
+  <div id="bulb" class="bulbcontainer bulb">
+  </div>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
+
+CSS CODE:
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.bulb {
+  background: yellow;
+}
+
+.bulbcontainer {
+  height: 341px;
+  width: 341px;
+}
+
+JS CODE:
+// Q1. Write program to show different alerts when different buttons are clicked.
+// <button onclick="alert('Please give me one plate of chowmein')">Chow</button>
+// <button onclick="alert('Please give me one plate of vada pao')">Pao</button>
+// <button onclick="alert('Please give me one plate of vada wow')">Wow</button>
+
+// Q2. Create a website capable of storing bookmarks of your favorite websites using href.
+/*
+  <a href="https://google.com"><button>GOOGLE</button></a>
+  <a href="https://twitter"><button>TWITTER</button></a>
+  <a href="https://fb"><button>FACEBOOK</button></a>
+*/
+
+// Q3. Repeat Q2 using eventListener.
+/*
+document.getElementById("google").addEventListener("click",function() {
+  window.location = "https://google.com";
+  win.focus();
+})
+*/
+
+// Q4. Write a js program to keep fetching contents of a website(every 5 seconds).
+/* const fetchContent = async(url) => {
+  con = await fetch(url);
+  let a = await con.json();
+  return a;
+}
+setInterval(async function() {
+  let url = "https://jsonplaceholder.typicode.com/todos/1"
+  console.log(await fetchContent(url))
+}, 5000)
+*/
+
+// Q5. Create a glowing bulb effect using classlist toggle method in javascript.
+setInterval(async function() {
+  document.querySelector("#bulb").classList.toggle("bulb")
+}, 300)

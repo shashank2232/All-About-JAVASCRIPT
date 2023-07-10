@@ -1,0 +1,49 @@
+JS CODE:
+// SET TIMEOUT
+/* alert("Hello");
+   setTimeout(function () {
+   alert("I am inside of setTimeout")
+ },2000);
+*/
+// now if i want to see this alert after 4 seconds and after the javascript code gets executed
+// javascript me kisi task to taalna h so that vo baad me execute ho, use setTimeout
+// 2000 means 2000 miliseconds i.e. 2seconds 
+// when js executes,we see alert, then after 2 seconds we again see alert cause of setTimeout
+
+/*alert("Hello");
+let a = setTimeout(function () {
+   alert("I am inside of setTimeout")
+ },3000);
+console.log(a);             // it shows the timer id
+ */
+
+// this clearTimeout is used to cancel the execution of setTimeout , alert("I am inside of setTimeout") won't come after 3seconds
+// clearTimeout(a);
+
+/* let b = prompt("Do you want to run setTimeout?");
+if("no" == b){
+  clearTimeout(a);
+}
+*/
+// now if user enters "yes", it'll show alert but if he enters "no",clearTimeout executes and alert wont show
+
+// here after 3seconds, function sum executes and prints result in console i.e. 
+// YES,RUNNING AND THE SUM IS: 74
+/* const sum = (a,b,c) => {
+  console.log("YES,RUNNING AND THE SUM IS: " + (a+b+c));
+}
+setTimeout(sum,3000,17,22,35);
+*/
+
+//SET INTERVAL
+// runs multiple times , after every 3seconds alert will keep coming to screen 
+/* setInterval(function (){
+   alert("Set Interval");
+ },3000)
+*/ 
+// use clearInterval to cancel setInterval
+// clearInterval();
+
+// NOTE: Diff. btw setTimeout & setInterval:
+// setTimeout means execute/run the function after 2seconds (executed only once)
+// setInterval means keep executing function on gap of 2seconds (keeps executing after an interval of time)

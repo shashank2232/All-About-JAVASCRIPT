@@ -1,0 +1,77 @@
+HTML CODE:
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Add Event Listener</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div>
+    <button id="btn">Click Me</button>
+  </div>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
+
+JS CODE:
+// (1) addEventListener (used to assign multiple handlers to an event)
+let btn = document.getElementById("btn");
+/*
+btn.addEventListener('click', function(e) {
+  alert("Hello World 1!");
+})
+btn.addEventListener('click', function(e) {
+  alert("Hello World 2!");
+})
+*/
+// when 1st we click on button, 1st eventlistener executes showing "Hello World 1!" , then when we again click on button 2nd eventlistener executes showing "Hello World 2!"
+
+// (2) removeEventListener (used to remove the event)
+// e refers to [object PointerEvent]
+let x = function(e) {
+  alert("Hello World 1!");
+  console.log(e);
+}
+let y = function(e) {
+  alert("Hello World 2!");
+}
+// assigning functions to x and y so that later differentiate btw them
+btn.addEventListener('click', x);
+btn.addEventListener('click', y);
+
+let a = prompt("Whats your fav number?");
+if(a == "2"){
+  btn.removeEventListener('click',x);
+}
+// here if user enters 1 then clicks on button, both events will be executed but if user enters 2 and then clicks on button, removeEventListener will remove the EventListener of function x, and only y will execute and show "Hello World 2!"
+// NOTE: Both events function need to be separate otherwise removeEventListener won't work 
+// Whenever using removeEventListener, always give function like above only
+
+// (3) Event Object
+// When an event happens, browser creates an event object, puts details into it and passes it as an argument to the handler.
+// elem.onclick(function (event){
+// ....
+// })
+// when user clicks, browser makes an event object & passes function
+// event.type : tells the type of event
+// event.currentTarget : element that handled the event
+
+// event.clientX/clientY : coordinates of cursor
+/* let x = function(event) {
+  alert("Hello World 1!");
+  console.log(event.type,event.clientX,event.clientY);
+}
+*/
+// tells the place/coordinates of cursor where user clicked

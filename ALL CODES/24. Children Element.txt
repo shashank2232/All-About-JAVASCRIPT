@@ -1,0 +1,38 @@
+HTML CODE :
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Children Elements</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div>
+    <p>This is me and I am great!</p>
+    <span>Sibling</span>
+  </div>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
+
+JAVASCRIPT CODE:
+
+// console.log(document.body.firstChild);    // shows first child of body element (text) 
+// console.log(document.body.lastChild);    // shows last child of body element(script)
+// console.log(document.body.childNodes);    // shows all child nodes of body  (NodeList(4) [text, div, text, script])
+
+// converting childNodes which is a Node List into an array
+let arr = Array.from(document.body.childNodes);
+console.log(arr);            // now its an array

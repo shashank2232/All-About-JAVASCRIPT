@@ -1,0 +1,79 @@
+HTML CODE:
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Practice Set 7</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <nav>
+    <li>Home</li>
+    <li>About</li>
+    <li>Blog</li>
+    <li>Contact</li>
+  </nav>
+  <table>
+    <td>Hello</td>
+    <tr>Hello 1</tr>
+    <tr>Hello 2</tr>
+    <tr>Hello 3</tr>
+    <tr>Hello 4</tr>
+  </table>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
+
+CSS CODE:
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  /* background: cyan; */
+}
+
+nav li {
+  list-style: none;
+  padding: 0 23px;
+}
+
+JS CODE:
+// Q1. Create a navbar and change color of its first element to red.
+// document.getElementsByTagName("nav")[0].firstElementChild.style.color = "red";
+
+// Q2. Create a table without tbody. Now use "View page source" button to check whether it has tbody or not.
+// No, it("View page source") doesn't have a tbody, since view page source shows us raw source i.e. whatever we have written in our code. But in Inspect, tbody will be shown since it auto corrects code.
+
+// Q3. Create an element with 3 children. Change color of 1st and last element to green.
+// document.getElementsByTagName("nav")[0].firstElementChild.style.color = "green";
+// document.getElementsByTagName("nav")[0].lastElementChild.style.color = "green";
+
+// Q4. Write a JS code to change background of all <li> tags to "yellow".
+// Array.from(document.getElementsByTagName("li")).forEach(element => {
+//   element.style.background = "cyan";
+// })
+// doing Array.from as only then we can use array methods i.e. forEach
+
+// Q5. Which of the following is used to look for the farthest ancestor that matches a given CSS selector?
+// (a) matches  (b) closest  (c) contains  (d) none
+// none because closest gets the closest ancestor but none for farthest

@@ -1,0 +1,46 @@
+HTML CODE:
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Matches,Closest,Contains</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="box" id="id1">This is an element 1 <span id="sp1">Span</span></div>
+  <div class="box" id="id2">This is an element 2</div>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
+
+JS CODE:
+// MATCHES (Checks if element matches the css selector or not)
+let id1 = document.getElementById("id1");
+console.log(id1);
+console.log(id1.matches(".class"));        // fasle as it doesnt match with selector ".class" i.e. it doesnt match with class named ".class"
+
+console.log(id1.matches(".box"));   // true as box class is present
+
+// CLOSEST 
+let sp1 = document.getElementById("sp1");
+console.log(sp1.closest(".box"));
+console.log(sp1.closest("#sp1"));
+
+// CONTAINS
+console.log(id1.contains(sp1));   // true as in body, div with id=("id1") contains a span with id="sp1"  , hence true
+console.log(sp1.contains(sp1));    // true
+console.log(sp1.contains(id1));    // false
+
+let id2 = document.getElementById("id2");
+console.log(id2.contains(sp1));           // false since id2 has no span with id "sp1", only id1 has it

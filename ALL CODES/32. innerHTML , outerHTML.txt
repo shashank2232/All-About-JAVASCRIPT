@@ -1,0 +1,56 @@
+HTML CODE:
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Inner HTML</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  Hello world
+  <span id="first" hidden>Hey I am span.</span>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
+
+JS CODE:
+// let x = document.getElementsByTagName('span')[0];
+// console.log(x);
+// let y = document.getElementsByTagName('span')[0];
+// console.dir(y);
+
+// console.log(document.body.firstChild.nodeName)     // text
+// console.log(document.body.firstElementChild.nodeName)   // span
+
+// innerHTML, outerHTML
+// innerHTML only valid for element nodes
+// first.innerHTML         (first is id of span)
+// 'Hey I am span.'
+// we can get as well as set the innerHTML 
+
+// outerHTML has all html i.e. innerHTML + element itself
+// we can get as well as set the outerHTML 
+// first.outerHTML      '<span id="first">Hey I am span.</span>' (get)
+// first.outerHTML = "<div>HEY</div>"    (set)
+
+// document.body.firstChild.nodeValue    '\n  Hello world\n  '
+// gives content inside firstchild of body
+
+// text content  => provides access to text inside element, only text, minus all tags
+// console.log(document.body.firstChild.data);
+// console.log(document.body.textContent);
+// we get the text in body
+
+// HIDDEN property specifies whether element is visible or not
+// first.hidden = false
