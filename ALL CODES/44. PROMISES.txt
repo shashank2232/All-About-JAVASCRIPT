@@ -1,0 +1,32 @@
+//PROMISES
+// First "Hello One" prints, then "My name is " + "Hello Three!" printed then after 2seconds "Hello Two in 2 seconds!" is printed. (setTimeout is Asynchronous)
+// NOTE: alert in Node.js prints in the console
+
+// In promise, resolve and reject are 2 callbacks provided by js itself, resolve means job done successfully, reject means job failed
+let promise = new Promise(function(resolve, reject) {
+  // alert("Hello");
+  console.log("Hello");
+  resolve(56);
+})
+console.log("Hello One");
+setTimeout(function() {
+  console.log("Hello Two in 2 seconds!");
+}, 2000)
+console.log("My name is " + "Hello Three!");
+console.log(promise);              // Promise{56}
+// Promise has 2 properties:
+// (1) STATE: "fulfilled" when resolved, "rejected" when reject
+// (2) RESULT: changes to value(if resolved) or error(if reject)
+
+// Overall, the code showcases the asynchronous nature of JavaScript. The Promise is resolved immediately upon creation, but its resolution does not block the execution of subsequent code. The timeout function executes after a delay, and the console logs occur synchronously.
+
+// Q. Why we use Promises?
+// Ans. Suppose we have to do following:
+// Fetch google.com homepage , when done console.log("google homepage done")
+// Fetch data from the data API
+// Fetch pictures from the server
+// Print "downloading"
+// Rest of the JAVASCRIPT running
+
+// we would like each of them to run parallelly i.e. page or site should not stop for one task and then move onto other, taska should be running parallely,no matter if they resolve or get rejected, hence PROMISES are used.
+// Promises are used for PARALLEL EXECUTION.

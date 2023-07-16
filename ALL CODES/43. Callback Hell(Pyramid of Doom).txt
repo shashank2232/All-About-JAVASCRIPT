@@ -1,0 +1,18 @@
+/*
+console.log("PYRAMID OF DOOM!");
+
+step1(function(value1){
+  step2(function(value2){
+    step3(function(value3){
+      step4(function(value4){
+        step5(function(value5){
+          step6(function(value6){
+            step7(function(value7){
+})
+
+This way it goes onto the right and calls become more nested,code becomes more deeper and difficult to manage. This way isn't good to code.
+
+Solution to this problem -> PROMISES
+*/
+
+// This technique of using callbacks isn't bad when we have few callbacks but when there are more and more callbacks, that causes problem.
