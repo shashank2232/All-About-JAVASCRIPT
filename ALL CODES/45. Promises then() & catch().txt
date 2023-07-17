@@ -1,0 +1,77 @@
+// The consuming code can receive the final result of a promise through then & catch.
+// If we're interested only in successful completions,we can provide only one function argument to .then()
+// If we're interested only in errors, we can use .catch()
+
+// this is syntax of Promise, it tells that whatever we'll do in this will execute in background and when it'll be executed you will be notified using .then() and .catch()
+// RESOLVED
+/*
+let p = new Promise((resolve,reject)=>{
+  console.log("Promise is pending.");
+  setTimeout(()=>{
+    console.log("I am a promise and I am fulfilled.");
+    // to fulfill we have to call resolve
+    resolve(true);
+  },5000)
+})
+// So in console "Promise is pending." will be written then after 5seconds when promises fulfills, "I am a promise and I am fulfilled." will be written.
+
+console.log(p);                     // Promise {<pending>}
+// its state is pending and result is undefined since promise was not yet resolved
+*/
+
+// REJECTED
+/* let p = new Promise((resolve,reject)=>{
+  console.log("Promise is pending.");
+  setTimeout(()=>{
+    console.log("I am a promise and I am rejected.");
+    // syntax used to throw a new error
+    reject(new Error("I am an error."));
+  },5000)
+})
+*/
+// OP: Uncaught (in promise) Error: I am an error.
+// throws error
+
+// Promise when gets resolved, it gives a VALUE.
+// Promise when gets rejected, it gives an ERROR.
+
+// Doing both resolve and reject together
+let p1 = new Promise((resolve, reject) => {
+  console.log("Promise is pending.");
+  setTimeout(() => {
+    // console.log("I am a promise and I am fulfilled.");
+    resolve(true);
+  }, 5000)
+})
+
+let p2 = new Promise((resolve, reject) => {
+  console.log("Promise is pending.");
+  setTimeout(() => {
+    // console.log("I am a promise and I am rejected.");
+    reject(new Error("I am an error."));
+  }, 5000)
+})
+// console.log(p1,p2);
+// NOTE: Here p1 and p2 together won't take 10seconds to execute, they'll run parallely and after 5seconds only we'll get both of their results.
+
+// We want that after execution of p1, we want some work to be done
+p1.then((value) => {
+  console.log(value);
+})
+// so here when p1 executes then console prints the value resolved in p1 i.e. true
+
+p2.catch((error) => {
+  console.log("Some error occured to p2.")
+})
+// here we're handling error by using catch(), so in console we won't see error
+// p1  Promise {<fulfilled>: true}
+// p2  Promise {<rejected>: Error: I am an error. }
+
+// when we don't wanna use catch and still perform same operations
+/*p2.then((value)=>{
+  console.log(value);
+},(error)=>{
+  console.log(error);
+})
+*/
+// Error: I am an error.
